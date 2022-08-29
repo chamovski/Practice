@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarList li {
+    list-style-type: none;
+    display: inline;
+}
+
+.navbarList li a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbarList li .getNowBtn {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+main {
+    background-color: lightGray;
+    min-height: 90vh;
+}
+
+#title {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10vh 0;
+}
+
+#title h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#title p {
+    font-size: 1.5rem;
+}
+
+/* card css start */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    padding: 50px 70px;
+}
+
+.parent a {
+    text-decoration: none;
+}
+
+.parent .myCard {
+    min-height: 200px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.parent .myCard:hover {
+    transform: scale(1.05);
+}
+
+.parent .myCard img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 2vh;
+}
+
+.parent .myCard span {
+    color: orangered;
+    font-weight: 600;
+}
+
+.parent .myCard p {
+    font-size: 24px;
+    margin-top: 2vh;
+    font-weight: bolder;
+    color: black;
+}
+
+/* card css end */
+
+/* footer start */
+
+.myContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    padding: 4em 6em;
+}
+
+.info {
+    margin: auto;
+}
+
+.info blockquote {
+    color: gray;
+    line-height: 1.5;
+    width: 80%;
+    margin-bottom: 1.5em;
+}
+
+.info a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+    margin: 0 10px;
+}
+
+.footerList ul {
+    list-style-type: none;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.footerList ul .listHeader {
+    color: gray;
+    margin-bottom: 4vh;
+}
+
+.footerList ul li {
+    margin-bottom: 2vh;
+}
+
+.footerList ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* footer end */
+
+/* modal start */
+
+.myModal{
+    display: none;
+    width: 50%;
+    min-height: 60vh;
+    position: fixed;
+    top: 10vh;
+    left: 25%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 5;
+}
+.myModal img{
+    width: 100%;
+}
+.myModal h2{
+    text-align: center;
+    margin: 0.5em;
+}
+.myModal span{
+    display: inline-block;
+    margin: 0.5em 10%;
+    color: red;
+}
+.myModal p{
+    text-align: justify;
+    width: 80%;
+    margin: 0.5em auto;
+}
+
+.myModal button{
+    display: block;
+    width: 30%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 1em auto;
+    border-color: blue;
+    background-color: transparent;
+}
+.myModal button:hover{
+    background-color: blue;
+    cursor: pointer;
+    color: white;
+    border-color: blue;
+}
+.myModal .closeBtn{
+    position: absolute;
+    top: 5px;
+    right: -20px;
+    cursor: pointer;
+}
+.myModal .closeBtn:hover{
+    color: blue;
+}
+.fadeBackground{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: grey;
+    opacity: 85%;
+}
+/* modal end */
+
+
+
+
+
+/* tablet view */
+@media only screen and (max-width: 960px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .myContainer {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .info blockquote {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .parent {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .myContainer {
+        grid-template-columns: 1fr;
+    }
+}
